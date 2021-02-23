@@ -1,0 +1,73 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+<h2>Active Listings</h2>
+
+<hr>
+
+<div class="outer-active-main-div">
+    <ul id="listings">
+    {% for listing in active_listings %}
+        {% if listing.active_listing == True %}
+            <li>
+                <div class="active-main-div">
+                    <div class="active-listing-div">
+                        <div class="active-listing-image">
+                        {% if listing.image %}
+                                <a href="{% url 'listing' listing.id %}"><p><img src="{{ listing.image.url }}"></p></a>
+                            {% else %}
+                            {% endif %}
+                        </div>
+
+                        <div class="active-listing-info">
+                            <h3><a href="{% url 'listing' listing.id %}">{{ listing.title }}</a></h3>
+                            <div class="active-description-info">
+                                <p><strong>Description:</strong> {{ listing.description }}</p>
+                            </div>
+                            <p><strong>Price:</strong> ${{ listing.starting_price }}</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {% else %}
+        {% endif %}
+        
+    {% endfor %}
+    </ul>
+</div>
+    <hr>
+
+    <h2>Closed Listings</h2>
+
+    <hr>
+
+    <ul id="listings">
+    {% for listing in active_listings %}
+    {% if listing.active_listing == False %}
+        <li>
+            <div class="active-main-div">
+                <div class="active-listing-div">
+                    <div class="active-listing-image">
+                    {% if listing.image %}
+                            <a href="{% url 'listing' listing.id %}"><p><img src="{{ listing.image.url }}"></p></a>
+                        {% else %}
+                        {% endif %}
+                    </div>
+
+                    <div class="active-listing-info">
+                        <h3><a href="{% url 'listing' listing.id %}">{{ listing.title }}</a></h3>
+                        <div class="active-description-info">
+                            <p><strong>Description:</strong> {{ listing.description }}</p>
+                        </div>
+                        <p><strong>Price:</strong> ${{ listing.starting_price }}</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    {% else %}
+    {% endif %}
+    
+    {% endfor %}
+    </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,203 @@
+/* body {
+    padding: 10px;
+} */
+
+/* NAV */
+#ul{
+    list-style:none;
+}
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+
+/* ACTIVE LISTING PAGE */
+.outer-active-main-div{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.active-main-div {
+    border-collapse: collapse;
+    display: table;
+    width: 100%;
+    margin-left: 60px;
+}
+
+#listings{
+    list-style: none;
+}
+
+#listings li{
+    float: left;
+}
+
+.active-listing-div {
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+}
+ 
+.active-listing-image {
+    float: left;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 5px;
+    border-radius: 8px;
+    width: 250px;
+    height: 250px;
+    background-color: white;
+}
+
+.active-listing-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    object-position: 20% 10%;
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+.active-listing-info {
+    margin-right: 150px;
+    height: 100px;
+}
+
+.active-description-info {
+    height: 50px;
+}
+
+/* INDIVIDUAL LISTING PAGE */
+.main-div { 
+    border-collapse: collapse;
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+}
+ 
+.listing-image {
+    float: left;
+    position: relative;
+    margin-top: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 500px;
+    height: 500px;
+}
+
+.listing-image img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    max-height: 400px;
+    vertical-align: middle;
+}
+
+.listing-info {
+    word-break: normal;
+    font-family: Arial; /* optional */
+    /* font-weight: bold; optional */
+    float: right;
+    width: 350px;
+    margin-right: 150px;
+}
+
+.listing-comments {
+    font-family: Arial; /* optional */
+    /* font-weight: bold; optional */
+    display: table-row;
+    vertical-align : bottom;
+}
+
+.prices {
+    display: flex;
+    line-height: 32px;
+}
+
+.prices p{
+    margin-right: 5px;
+}
+
+form {
+    display: table;
+}
+
+
+label {
+    display: table-row;
+    margin: 10px auto;
+}
+
+textarea {
+    height: 200px;
+    width: 400px;
+}
+
+.min{
+    color: red;
+}
+
+.input {
+    display: table-cell;
+    margin: 10px auto;
+}
+
+#placebid{
+    display: block;
+    margin-top: 5px;
+}
+
+#closebid{
+    margin-bottom: 5px;
+}
+
+.winner {
+    color: red;
+}
+
+.comment{
+    height: 100px;
+    width: 400px;
+}
+
+.postcomment{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.save{
+    display: block;
+    margin-top: 10px;
+}
+
+/* LOGIN/REGISTER */
+.login, .register{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/* CREATE LISTING */
+.create-listing {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}

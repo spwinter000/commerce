@@ -1,0 +1,15 @@
+<!-- {% extends "auctions/listing/{{listing.id}}.html" %} -->
+
+{% block body %}
+
+{% for bid in bid_prices %}
+        <p>{{ bid }}</p>
+        <br>
+    {% endfor %}
+
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+
+<!-- TODO -->
+{% endblock %}
